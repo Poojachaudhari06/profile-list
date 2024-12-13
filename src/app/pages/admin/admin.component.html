@@ -1,0 +1,50 @@
+<div class="admin-container">
+    <h2>Admin Panel</h2>
+    
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <label for="name">Name:</label>
+      <input id="name" formControlName="name" type="text">
+      
+      <label for="photo">Photo URL:</label>
+      <input id="photo" formControlName="photo" type="text">
+      
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description"></textarea>
+      
+      <label for="address">Address:</label>
+      <input id="address" formControlName="address" type="text">
+      
+      <label for="lat">Latitude:</label>
+      <input id="lat" formControlName="lat" type="number">
+      
+      <label for="lng">Longitude:</label>
+      <input id="lng" formControlName="lng" type="number">
+      
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email">
+      
+      <label for="phone">Phone:</label>
+      <input id="phone" formControlName="phone" type="text">
+      
+      <label for="interests">Interests (comma separated):</label>
+      <input id="interests" formControlName="interests" type="text">
+      
+      <button type="submit">{{ selectedProfile ? 'Update Profile' : 'Add Profile' }}</button>
+      <button type="button" (click)="resetForm()">Reset</button>
+    </form>
+  
+    <div class="profile-list">
+      <h3>Existing Profiles</h3>
+      <div *ngFor="let profile of profiles" class="profile-list-item">
+        <div>
+          <h4>{{ profile.name }}</h4>
+          <p>{{ profile.address }}</p>
+        </div>
+        <div>
+          <button (click)="editProfile(profile)">Edit</button>
+          <button (click)="deleteProfile(profile.id)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

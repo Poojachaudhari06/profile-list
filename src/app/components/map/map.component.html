@@ -1,0 +1,10 @@
+<div class="map-container">
+    <google-map
+      height="400px"
+      width="100%"
+      [center]="{ lat: profile.lat, lng: profile.lng }"
+      [zoom]="15">
+      <map-marker [position]="{ lat: profile.lat, lng: profile.lng }"></map-marker>
+    </google-map>
+  </div>
+  

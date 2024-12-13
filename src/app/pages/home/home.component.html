@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Profiles</h1>
+    <div class="search-bar">
+      <input type="text" [(ngModel)]="searchQuery" placeholder="Search by name">
+    </div>
+    <div class="profile-grid">
+      <app-profile-card
+        *ngFor="let profile of filteredProfiles"
+        [profile]="profile"
+        (viewOnMap)="viewOnMap($event)">
+      </app-profile-card>
+    </div>
+    <app-map *ngIf="selectedProfile" [profile]="selectedProfile"></app-map>
+  </div>
+  

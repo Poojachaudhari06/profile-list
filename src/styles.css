@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@media (max-width: 768px) {
+    .profile-card {
+      padding: 12px;
+    }
+  
+    .profile-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  
+    .map-container {
+      margin: 8px 0;
+    }
+  
+    .admin-container {
+      padding: 12px;
+    }
+  
+    .search-bar input {
+      width: 100%;
+    }
+  }
+  

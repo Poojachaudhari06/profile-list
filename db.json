@@ -1,0 +1,29 @@
+{
+    "profiles": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "photo": "https://via.placeholder.com/150",
+        "description": "Software Developer",
+        "address": "123 Main St, Springfield, IL",
+        "lat": 39.7817,
+        "lng": -89.6501,
+        "email": "john.doe@example.com",
+        "phone": "555-555-5555",
+        "interests": "Coding, Hiking"
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "photo": "https://via.placeholder.com/150",
+        "description": "Web Designer",
+        "address": "456 Elm St, Springfield, IL",
+        "lat": 39.7817,
+        "lng": -89.6501,
+        "email": "jane.smith@example.com",
+        "phone": "555-555-5555",
+        "interests": "Photography, Painting"
+      }
+    ]
+  }
+  
